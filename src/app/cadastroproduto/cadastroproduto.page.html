@@ -1,0 +1,48 @@
+
+<ion-toolbar>
+  <ion-title class="btnm buscar color animate__animated animate__fadeInLeft ">Cadastro Produto</ion-title>
+
+</ion-toolbar>
+<ion-item>
+  <ion-input [(ngModel)]="produto.Nome_Produto" placeholder="Nome do Produto" position="stacked" class="animate__animated animate__fadeInLeft ">
+  </ion-input>
+
+</ion-item>
+<br>
+<ion-item>
+  <ion-input type="number" [(ngModel)]="produto.Valors_Produto" placeholder="Valor do Produto" position="stacked" class="animate__animated animate__fadeInLeft ">
+  </ion-input>
+
+</ion-item>
+<br>
+<ion-item>
+  <ion-input [(ngModel)]="produto.Caracteristica_Produto" placeholder="Caracteristicas do Produto" position="stacked"
+    class="animate__animated animate__fadeInLeft ">
+  </ion-input>
+
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>Importe a foto do Produto</ion-label>
+  <input placeholder="Foto do Produto" position="stacked"
+  class="animate__animated animate__fadeInLeft " type="file">
+</ion-item>
+<br>
+
+<ion-content class="teste" [fullscreen]="true">
+
+  <ion-header collapse="condense">
+  </ion-header>
+  <div class="animate__animated animate__fadeInLeft btns">
+    <ion-button (click)="salvaPet()" color="dark" size="large" >
+
+      <ion-icon class="btnm"  color="success" name="checkmark-circle-outline"></ion-icon>
+
+    </ion-button>
+    <ion-button color="dark" size="large" routerLink="/profile">
+
+      <ion-icon class="btnm" color="danger" name="close-outline"></ion-icon>
+
+    </ion-button>
+  </div>
+</ion-content>
