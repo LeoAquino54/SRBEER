@@ -13,25 +13,25 @@
           <span> Click Aqui<a href="http://localhost:8100/cadastrocomercio" class="color2"> cadastrar </a>Caso seja um comercio</span>
         </ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content>
+      <ion-card-content [formGroup]="formulario">
         <ion-item>
-          <ion-input placeholder="Nome Completo"></ion-input>
+          <ion-input placeholder="Nome Completo" formControlName="name"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Email"></ion-input>
+          <ion-input placeholder="Email" formControlName="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Telefone"></ion-input>
+          <ion-input placeholder="Telefone" formControlName="phone"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="CEP"></ion-input>
+          <ion-input placeholder="CEP" formControlName="cep"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Senha"></ion-input>
+          <ion-input placeholder="Senha" formControlName="password"></ion-input>
         </ion-item>
 
         <div class="bottom-section">
-          <ion-button >Criar</ion-button>
+          <ion-button (click)="register()" [disabled]="formulario.invalid">Criar</ion-button>
           <span> Já possui conta?<a href="http://localhost:8100/login" > entrar</a></span>
         </div>
       </ion-card-content>

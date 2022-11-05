@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
@@ -8,19 +9,25 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
-
-  constructor(private router:Router,
+formulario : FormGroup
+  constructor(private router:Router,private formbuilder:FormBuilder,
     private userService:UserService) { }
 
   ngOnInit() {
-    this.register()
+    this.formulario = this.formbuilder.group({
+      name:["",Validators.required],
+      email:["",Validators.required],
+      password:["",Validators.required],
+      cep:["",Validators.required],
+      phone:["",Validators.required],
+    })
   }
 
   signUPUser(){
  this.router.navigate(['login']);
   }
   register(){
-    this.userService.usersall().subscribe(res => {
+    this.userService.register(this.formulario.value).subscribe(res => {
       console.log(res)
     })
   }
