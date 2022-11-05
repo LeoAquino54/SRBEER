@@ -33,13 +33,13 @@
 
        <ion-slides pager="true" [options]="options" (click)="appRating()">
          <!-- slider one -->
-        <ion-slide>
+        <ion-slide *ngFor="let item of comercios">
           <ion-card class="main-product-card">
             <ion-card-content>
             <img src="../../../assets/1.png" />
 
             <ion-card-title>
-              BAR 1
+              {{item?.name}}
           </ion-card-title> 
           
             <ion-card-subtitle>
@@ -60,7 +60,7 @@
          </ion-card>
         </ion-slide>
 <!-- Slider two -->
-        <ion-slide>
+        <!-- <ion-slide>
           <ion-card class="card-wrapper main-product-card">
             <ion-card-content>
             <img src="../../../assets/2.png" />
@@ -85,7 +85,7 @@
           
          </ion-card-content>
          </ion-card>
-        </ion-slide>
+        </ion-slide> -->
 
        </ion-slides>
       </div>

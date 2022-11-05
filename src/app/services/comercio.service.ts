@@ -11,4 +11,8 @@ export class ComercioService {
     return this.httpClient.post(`http://127.0.0.1:8000/api/business `,comercio)
     
      }
+     comercioall(){
+      return this.httpClient.get(`http://127.0.0.1:8000/api/business `)
+      
+       }
 }

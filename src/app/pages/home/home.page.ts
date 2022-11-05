@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
+import { ComercioService } from 'src/app/services/comercio.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,10 @@ export class HomePage implements OnInit {
   selectedSlide: any;
   @ViewChild('slides', { static: false }) slider: IonSlides;
   
-  constructor() { }
+  comercios: any = []
+  constructor(
+    private comercioservice:ComercioService
+  ) { }
 
   options = {
     slidesPerView: 1.5,
@@ -26,6 +30,7 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+    this.buscaComercios()
   }
 
 
@@ -45,5 +50,11 @@ export class HomePage implements OnInit {
 
   }
 
+  buscaComercios(){
+    this.comercioservice.comercioall().subscribe(res => {
+      this.comercios = res
+    })
+    
+     }
 
 }
