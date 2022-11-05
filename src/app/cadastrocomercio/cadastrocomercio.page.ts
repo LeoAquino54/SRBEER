@@ -31,7 +31,7 @@ export class CadastrocomercioPage implements OnInit {
     })
 
   }
-  async register(){
+  async save(){
     const loading = await this.loadingController.create({
       message: 'Salvando...',
       translucent: true,
