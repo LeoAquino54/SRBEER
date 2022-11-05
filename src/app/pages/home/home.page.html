@@ -12,7 +12,7 @@
       </div>
       <div class="title-toolbar">
 
-        <Strong class="title">Encontre!!</Strong>Os melhores Bares    
+        <Strong class="title">Encontre!! </Strong> Os melhores Bares    
     
     </div>
    
@@ -149,19 +149,29 @@
                 
                 </div>
               </ion-slide>
-              <ion-slide>
-                <h4>Awesome Slide 2</h4>
-              </ion-slide>
-              <ion-slide>
-                <h4>Awesome Slide 3</h4>
-              </ion-slide>
-            </ion-slides>
-              
-          </ion-toolbar>
-        </ion-header>
-      </div>
-
-  </div>
-  </div>
-
-</ion-content>
+              <ion-slides pager="false" #slides [options]="sliderOptions" (ionSlideDidChange)="slidesChanged(slides)" (ionSlideDidLoad)="slidesChanged(slides)" style="padding-bottom: 50px;">
+                <ion-slide>
+                 
+                  <div class="bottomstyle">
+                      <ion-item lines="none">
+                        
+                        <ion-avatar slot="start">
+                          <img src="../../../assets/10001721.jpg" />
+                          <!-- <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" >  -->
+                        </ion-avatar>
+                        <ion-label>
+                          <h2>Cerveja Skoll 300ml (Unidade)</h2>
+                              <ion-row>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                              </ion-row>
+    
+                        
+                        </ion-label>
+                      </ion-item>
+                  
+                  </div>
+                </ion-slide>
