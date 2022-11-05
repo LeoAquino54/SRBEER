@@ -4,22 +4,17 @@
       <div class="shape"><img src="../../assets/31.png" /></div>
   
       <ion-card>
-        <ion-card-content>
+        <ion-card-content [formGroup]="formulario">
           <ion-item>
-            <ion-input placeholder="Nome Completo"></ion-input>
+            <ion-input placeholder="Nome Completo" formControlName="name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Email"></ion-input>
+            <ion-input placeholder="Telefone" formControlName="phone"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Telefone"></ion-input>
+            <ion-input placeholder="CPNJ" formControlName="cnpj"></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-input placeholder="Senha"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="CPNJ"></ion-input>
-          </ion-item>
+          
   
           <div class="bottom-section">
             <ion-button (click)="signUPUser()">Criar</ion-button>
