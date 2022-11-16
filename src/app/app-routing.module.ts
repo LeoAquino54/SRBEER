@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'cadastrocomercio',
     loadChildren: () => import('./cadastrocomercio/cadastrocomercio.module').then( m => m.CadastrocomercioPageModule)
+  },
+  {
+    path: 'perfilcomercio',
+    loadChildren: () => import('./perfilcomercio/perfilcomercio.module').then( m => m.PerfilcomercioPageModule)
   }
 ];
 

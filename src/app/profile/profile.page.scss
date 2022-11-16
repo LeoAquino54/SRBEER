@@ -1,48 +1,60 @@
 .circle {
-    background-color: #aaa;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     overflow: hidden;
     position: relative;
+    margin-top: 5%;
   }
   
   .circle img {
     position: absolute;
     bottom: 0;
     width: 100%;
+    margin-top: 5%;
   }
-  .cores{
-    color: #000000;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    
-}
-.centralizar {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15%;
-}
-.centralizartext{
+  .img{
+    width: 100%;
+    text-align: center;
+
+  }
+  .img img{
+    width: 30%;
+  }
+  .centralizartext{
     color: rgb(0, 0, 0);
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
     
 }
-.bar {
-    background: #424041;
-    font-size: 25px;
-    border-bottom: 1px solid #f1f1f1;
-    text-align: center;
+
+.centralizartext2{
+  color: rgb(255, 0, 0);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  
 }
-.centralizardiv{
-    text-align: center;    
-}
-.btns{
-    text-align: center;
+  .centralizar {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
 }
 
+.teste{
+  margin-top: 5%;
+
+}
+
+.teste2{
+  margin-top: 5%;
+
+}
+.teste3{
+  margin-top: 2%;
+
+}
